@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "wheel", "numpy==2.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["arraymap"]
+
+# [tool.setuptools.package-data]
+# arraymap = ["__init__.pyi", "py.typed"]
+
+[tool.setuptools.dynamic]
+version = {attr = "setup.AM_VERSION"}
+
+[project]
+name = "arraymap"
+authors = [
+    {name = "Christopher Ariza"},
+    {name = "Brandt Bucher"},
+]
+description = "Dictionary-like lookup from NumPy array values to their integer positions"
+readme = "README.rst"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["dictionary", "array", "data structures"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+dynamic = ["version"]
+
+# [project.scripts]
+# my-script = "my_package.module:function"
